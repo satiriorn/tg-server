@@ -78,7 +78,7 @@ jobs:
           username: ${{ env.DOCKERHUB_LOGIN }}
           password: ${{ env.DOCKERHUB_TOKEN }}
       - name: Build and push to Docker Hub
-        uses: docker/build-push-action@master
+        uses: docker/build-push-action@v3
         if: |
           needs.checkout.outputs.new_update == 'true'
             && (env.DOCKERHUB_LOGIN != '' && env.DOCKERHUB_TOKEN != '')
