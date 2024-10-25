@@ -91,6 +91,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           tags: ${{ steps.meta.outputs.tags }}
           push: true
+          provenance: false
   commit:
     permissions:
       contents: write
